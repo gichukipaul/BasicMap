@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BasicMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fPt-Ig-c0m">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="823"/>
+                            </mapView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="aSp-U4-llm">
+                                <rect key="frame" x="30" y="836" width="354" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLy-Ud-O37">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Current Location"/>
+                                        <connections>
+                                            <action selector="currentLocationTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ky9-pU-3dg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poV-IW-l3P">
+                                        <rect key="frame" x="183" y="0.0" width="171" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Map Type"/>
+                                        <connections>
+                                            <action selector="mapTypeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mvY-Rr-q6O"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aSp-U4-llm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="IoP-p5-cQ3"/>
+                            <constraint firstItem="fPt-Ig-c0m" firstAttribute="centerX" secondItem="aSp-U4-llm" secondAttribute="centerX" id="P3L-DG-l2r"/>
+                            <constraint firstItem="fPt-Ig-c0m" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pyh-mq-gxU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aSp-U4-llm" secondAttribute="trailing" constant="30" id="RBy-N6-cVh"/>
+                            <constraint firstItem="aSp-U4-llm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="5" id="Wsi-lA-IaD"/>
+                            <constraint firstItem="fPt-Ig-c0m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eIR-Bb-lDF"/>
+                            <constraint firstItem="aSp-U4-llm" firstAttribute="top" secondItem="fPt-Ig-c0m" secondAttribute="bottom" constant="13" id="gfz-Gw-SCJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myMap" destination="fPt-Ig-c0m" id="WmT-zl-j3Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="63.616071428571423"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
